@@ -10,7 +10,7 @@ import {SizeSensor} from 'resize-sensor';
 </SizeSensor>
 ```
 
-`onSize` - Fires with the initial size of the component when component renders for the first time.
-`onResize` - Fires every time componets width or height changes.
-`onWidth` - Fires every time components width changes.
-`onHeight` - Fires every time components height changes.
+ - `onSize` - Fires with the initial size of the component when component renders for the first time.
+ - `onResize` - Fires every time componets width or height changes.
+ - `onWidth` - Fires every time components width changes.
+ - `onHeight` - Fires every time components height changes.
