@@ -1,6 +1,6 @@
 # React `<SizeSensor />`
 
-React component that fires even if size of its children changes.
+React component that fires `resize` events if size of its children changes.
 
 ```jsx
 import {SizeSensor} from 'resize-sensor';
@@ -11,6 +11,6 @@ import {SizeSensor} from 'resize-sensor';
 ```
 
  - `onSize` - Fires with the initial size of the component when component renders for the first time.
- - `onResize` - Fires every time componets width or height changes.
- - `onWidth` - Fires every time components width changes.
- - `onHeight` - Fires every time components height changes.
+ - `onResize` - Fires every time component's width or height changes.
+ - `onWidth` - Fires every time component's width changes.
+ - `onHeight` - Fires every time component's height changes.
