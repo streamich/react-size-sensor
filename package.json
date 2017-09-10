@@ -1,6 +1,6 @@
 {
   "name": "react-size-sensor",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Component with onSize and onResize events.",
   "main": "lib/index.js",
   "keywords": [
@@ -10,7 +10,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/streamich/react-resize-sensor.git"
+    "url": "https://github.com/streamich/react-size-sensor.git"
   },
   "peerDependencies": {
     "react": "^15.6.1"
@@ -19,7 +19,8 @@
     "babel-cli": "6.24.1",
     "babel-preset-es2015": "6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-plugin-transform-react-jsx": "^6.24.1"
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-plugin-transform-class-properties": "^6.24.1"
   },
   "scripts": {
     "build": "npm run build-js",

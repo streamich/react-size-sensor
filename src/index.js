@@ -5,20 +5,34 @@ const noop = () => {};
 
 
 export class SizeSensor extends Component {
+    width = null;
+    height = null;
+
     constructor (props, context) {
         super(props, context);
-        this.objectRef = (object) => {
-            this.object = object;
-        };
+        this.objectRef = object => this.object = object;
         this.onObjectResize = () => {
-            this.props.onResize(...this.getSize());
+            const [width, height] = this.getSize();
+            const {onResize, onWidth, onHeight} = this.props;
+            onResize(width, height);
+            if(width !== this.width) onWidth(width);
+            if(height !== this.height) onHeight(height);
+            this.width = width;
+            this.height = height;
         };
     }
 
     componentDidMount () {
         this.timeout = setTimeout(() => {
             this.object.contentDocument.defaultView.addEventListener('resize', this.onObjectResize);
-            this.props.onSize(...this.getSize());
+            const [width, height] = this.getSize();
+            this.width = width;
+            this.height = height;
+
+            const {onSize, onWidth, onHeight} = this.props;
+            onSize(width, height);
+            onWidth(width);
+            onHeight(height);
         }, 20);
     }
 
@@ -75,5 +89,7 @@ export class SizeSensor extends Component {
 
 SizeSensor.defaultProps = {
     onResize: noop,
-    onSize: noop
+    onSize: noop,
+    onHeight: noop,
+    onWidth: noop,
 };
