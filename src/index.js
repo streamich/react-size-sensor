@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import {Component, createElement as h} from 'react';
 
 
 const noop = () => {};
